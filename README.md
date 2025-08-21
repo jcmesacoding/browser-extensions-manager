@@ -31,14 +31,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-_Add here a screenshot of your final solution._
+<img width="1920" height="916" alt="image" src="https://github.com/user-attachments/assets/f55436b1-0ca5-4eee-8219-0269d518b8aa" />
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://jumedev-browser-extensions-manager.netlify.app
 
 ## My process
 
@@ -63,7 +60,7 @@ function toggleExtensionStatus(id) {
   extension.active = !extension.active;
   renderExtensions();
 }
-
+```
 ### Continued development
 
 In the future, I want to continue focusing on:
@@ -86,5 +83,5 @@ In the future, I want to continue focusing on:
 
 - Linkedin - @yourusername
 
-Acknowledgments
+### Acknowledgments
 Thanks to the Frontend Mentor community for inspiration and feedback during the process of building this challenge.
