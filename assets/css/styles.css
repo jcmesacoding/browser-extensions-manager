@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* General styles */
+:root {
+  /* Layouts */
+  --Mobile: 375px;
+  --Desktop: 1440px;
+
+  /* Neutrals */
+  --Neutral-900: hsl(227, 75%, 14%);
+  --Neutral-900-a: rgba(0, 0, 0, 0.2);
+  --Neutral-800: hsl(226, 25%, 17%);
+  --Neutral-700: hsl(225, 23%, 24%);
+  --Neutral-600: hsl(226, 11%, 37%);
+  --Neutral-300: hsl(0, 0%, 78%);
+  --Neutral-200: hsl(217, 61%, 90%);
+  --Neutral-100: hsl(0, 0%, 93%);
+  --Neutral-0:   hsl(200, 60%, 99%);
+
+  /* Red */
+  --Red-400: hsl(3, 86%, 64%);
+  --Red-500: hsl(3, 71%, 56%);
+  --Red-700: hsl(3, 77%, 44%);
+
+  /* Gradient */
+  --Light-Gradient: linear-gradient(180deg, #EBF2FC 0%, #a7f6fd 100%);
+  --Dark-Gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+  /* Text colors */
+  --font-color-base: hsl(227, 20%, 10%);
+  --font-color-secondary: hsl(227, 10%, 40%);
+
+  /* Fonts */
+  --font-size-base: 16px;
+  --font-family-base: 'Noto Sans', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+} 
+
+/* Dark mode variables */
+:root.dark {
+  /* Backgrounds */
+  --Light-Gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+  --Dark-Gradient: #0e2b53; 
+
+  /* Neutrals */
+  --Neutral-900: #FFFFFF;
+  --Neutral-900-a: rgba(255, 255, 255, 0.4);
+  --Neutral-800: #D0D4DA;
+  --Neutral-700: #8B8F98;
+  --Neutral-600: #5A5F6B;
+  --Neutral-300: #1F242D;
+  --Neutral-200: #2B2F3B;
+  --Neutral-100: #3C404D;
+  --Neutral-0:   #373b41;
+
+  /* Reds */
+  --Red-400: #FF6B6B;
+  --Red-500: #FF4B4B;
+  --Red-700: #E63946;
+
+  /* Font colors */
+  --font-color-base: #FFFFFF;
+  --font-color-secondary: #D0D4DA;
+}
+
+/* Global reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  background: var(--Light-Gradient);
+  color: var(--font-color-base);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 20px 200px;
+}
+
+/* NAVBAR */
+.navBar {
+  min-width: 280px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 1.2rem;
+  background: var(--Neutral-0);
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, .2);
+  transition: all ease .4s;
+  margin: 0 0 50px 0;
+  color: var(--font-color-base);
+}
+
+html.dark .navBar img {
+  filter: brightness(0) invert(1);
+}
+
+.navBar button {
+  width: 3rem;
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+  background: var(--Neutral-100);
+  color: var(--font-color-base);
+  transition: all ease .5s;
+}
+
+html.dark .navBar button img {
+  max-width: fit-content;
+  content: url('/assets/images/icon-sun.svg');
+}
+
+.navBar button:hover {
+  background: var(--Neutral-300);
+}
+
+/* FILTERS */
+.filter-contain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-item {
+  background-color: var(--Neutral-0);
+  font-size: var(--font-size-base);
+  border: none;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .3);
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: var(--font-color-base);
+}
+
+.filter-item.active {
+  background: var(--Red-500);
+  color: hsl(200, 60%, 99%);
+}
+
+.filter-item.active:hover {
+  background: rgb(202, 44, 36);
+}
+
+.filter-item:hover {
+  background: rgba(251, 253, 254, .1);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .1);
+  transition: all ease .3s;
+}
+
+/* EXTENSIONS */
+.extensions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* CARDS */
+.card {
+  background: var(--Neutral-0);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 20px;
+  min-height: 150px;
+  color: var(--font-color-base);
+  box-shadow: 0px 0px 0px 1px var(--Neutral-900-a);
+}
+
+.card-main {
+  display: flex;
+  gap: 10px;
+}
+
+.card-main .card-text {
+  position: relative;
+  top: -20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-main img {
+  position: relative;
+  top: -20px;
+}
+
+.card-main p {
+  position: relative;
+  top: -10px;
+  margin: 0;
+  color: var(--font-color-secondary);
+}
+
+.card .card-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .card-button .remove {
+  background-color: var(--Neutral-100);
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  color: var(--font-color-base);
+}
+
+.card .card-button .remove:hover {
+  background: var(--Red-500);
+  color: hsl(0, 0%, 93%);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .3);
+  transition: all ease .3s;
+}
+
+.card-button .off {
+  width: 44px;
+  height: 24px;
+  border: none;
+  border-radius: 40px;
+  background-color:hsl(0, 0%, 78%);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease .5s;
+}
+
+.card-button .on {
+  background: hsl(200, 60%, 99%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  left: -3px;
+  transition: all .5s;
+}
+
+.card-button .off.active {
+  background: var(--Red-700);
+}
+
+.card-button .off.active .on {
+  transform: translateX(20px);
+}
+
+/* FOOTER */
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+  transition: all .5s;
+}
+
+.attribution:hover {
+  transform: scale(1.2); 
+}
+
+.attribution a {
+  color: var(--Red-500);
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .filter-contain {
+    max-width: 100%;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  h1 {
+    max-width: 100%;
+    text-align: center;
+  }
+  .filter {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+  }
+}
+
+
+
+
+
+
