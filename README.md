@@ -77,11 +77,11 @@ In the future, I want to continue focusing on:
 - CSS Tricks - Great tips for responsive layouts.
 
 ### Author
-- Website - Your Name
+- Website - https://jumedev.netlify.app
 
-- Frontend Mentor - @yourusername
+- Frontend Mentor - https://www.frontendmentor.io/profile/jcmesacoding
 
-- Linkedin - @yourusername
+- Linkedin - https://www.linkedin.com/in/juan-carlos-mesa-
 
 ### Acknowledgments
 Thanks to the Frontend Mentor community for inspiration and feedback during the process of building this challenge.
